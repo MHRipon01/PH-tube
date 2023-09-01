@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PH Tube</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <main>
+        <nav class=" border-2 border-red-600">
+            <div class="navbar mt-5 grid grid-cols-1 md:grid-cols-3 bg-base-100 border-2 border-red-600 ">
+                <div class="navbar-start ml-20 md:ml-0">
+
+                    <a class="btn btn-ghost normal-case text-xl"><img src="Logo.png" alt="">
+                    </a>
+                </div>
+                <div class="navbar-center rounded-md   md:w-2/4  lg:flex">
+                    <button id="sort-by-view" class="p-3 m-auto  bg-slate-400 rounded-md my-6 text-white">
+                        sort by view
+                    </button>
+                </div>
+
+              
+                
+
+
+                <div class="navbar-end  ml-7">
+                    <button class="bg-red-500 text-white border-2 border-red-600 lg:-mr-40  p-3   rounded-lg" onclick="blog()">Blog</button>
+                </div>
+            </div>
+        </nav>
+        <!-- category container -->
+
+        
+       
+        <div id="all-category" class="mt-10 category-container grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 w-full gap-4 lg:flex justify-center  lg:w-9/12 lg:ml-16 border-2 border-green-200 items-center " >
+             <!-- <button  class="bg-slate-400 p-2 rounded-md lg:px-6 lg:mx-4 w-9/12 mx-3 md:w-auto">
+                All
+            </button>
+            <button class="bg-slate-400 p-2 rounded-md lg:px-6 lg:mx-4 w-9/12 mx-3 md:w-auto">
+                Music
+            </button>
+            <button class="bg-slate-400 p-2 rounded-md lg:px-5 lg:mx-4 w-9/12 mx-3 md:w-auto">
+                Comedy
+            </button>
+
+            <button class="bg-slate-400 p-2 rounded-md lg:px-5 lg:mx-4 w-9/12 mx-3 md:w-auto">
+                Drawing
+            </button>  -->
+        </div>
+
+
+        <!-- card container -->
+       
+<div id="card"   class="card-conatainer">
+    <div id="card-container" class="grid grid-cols-1 lg:w-full lg:grid-cols-4 lg:gap-3 mt-5">
+        <!-- <div class="card  bg-base-100 ">
+            <figure class="px-10 pt-10">
+              <img class="shadow-xl rounded-lg" src="Icon.png" alt="Shoes" class="rounded-xl" />
+            </figure>
+            <div class="card-body items-center text-center">
+                <div class="flex"> <img class="object-cover w-10 h-10 rounded-full" src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&h=764&q=100" alt=""> &nbsp;  &nbsp;
+                    <h2 class="card-title">Video title </h2>
+                </div>
+              <p>channel owner name </p>
+              <p>views</p>
+
+              <p class=" font-extrabold text-white -mt-20 ml-52  md:ml-96 md:-mt-20 lg:-mt-28 rounded-lg p-2 lg:ml-28 absolute bg-slate-400 "> ${timeConverter(convertedTime)}</p>
+              
+            </div>
+          </div> -->
+    </div>
+<!-- </div> -->
+
+<!-- drawing section -->
+
+<div id="drawing"  class="hidden justify-center items-center flex ">
+     <div class="">
+       <img src="Icon.png" alt="">
+       <h1 class="font-extrabold ">Oops!! Sorry, There is no content here</h1>
+   </div> 
+</div> 
+
+
+    </main>
+
+    <!-- scripts here -->
+    <script src="index.js"></script>
+
+</body>
+
+</html>
