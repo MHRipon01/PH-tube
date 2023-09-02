@@ -29,12 +29,17 @@ const handleCategory = async () => {
 };
 
 // let fetchedVideos = [];
-const handleClass = async (categoryId) => {
+let currentCategory = 1000;
+
+
+
+const handleClass = async (categoryId , isSort) => {
+  currentCategory = categoryId
   const res = await fetch(
     `https://openapi.programming-hero.com/api/videos/category/${categoryId}`);
 
   const data = await res.json();
-  videoData = data.data;
+  fetchData = data.data;
   // console.log(data.data);
   
   //  console.log(fetchedVideos);
@@ -44,23 +49,15 @@ const handleClass = async (categoryId) => {
   //   fetchd = fetchData
   // }
 
-  //sort 
-  function sortData(){
-    fetchData = videoData;
-    console.log(fetchData);
-
-    fetchData.sort((a, b) => b.others.views - a.others.views
-      );
-    console.log(fetchData);
-    
+  if(isSort == true){
+    fetchData = fetchData.sort((a, b) => parseInt(b.others.views) - parseInt(a.others.views))
   }
 
-  const sortByViewButton = document.querySelector("#sort-by-view");
-// console.log(sortByViewButton);
-sortByViewButton.addEventListener("click", () => {
- sortData()
-  // console.log();
-});
+  //sort 
+  
+    // console.log(fetchData);
+    
+
 
 
   if (data.data.length === 0) {
@@ -153,6 +150,13 @@ sortByViewButton.addEventListener("click", () => {
 function blog() {
   open("blog.html");
 }
+
+const sortByViewButton = document.querySelector("#sort-by-view");
+// console.log(sortByViewButton);
+sortByViewButton.addEventListener("click", () => {
+  handleClass(currentCategory , true)
+  // console.log();
+});
 
 handleClass(1000);
 handleCategory();
