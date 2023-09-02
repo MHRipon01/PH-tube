@@ -14,7 +14,7 @@ const handleCategory = async () => {
     const div = document.createElement("div");
 
     div.innerHTML = `
-        <button onclick = "handleClass(${category?.category_id})" class="bg-slate-400 p-2 rounded-md border-2 border-yellow-500 lg:px-6 text-white lg:mx-4 w-9/12 mx-3  md:w-auto">
+        <button onclick = "handleClass(${category?.category_id})" class="bg-slate-400 p-2 rounded-md lg:px-6 text-white lg:mx-4 w-9/12 mx-3  md:w-auto">
                ${category.category}
             </button>
         
@@ -77,9 +77,9 @@ const handleClass = async (categoryId) => {
     const convertedTime = parseFloat(videos?.others?.posted_date ? check : ``);
     // console.log(convertedTime);
     div.innerHTML = `
-        <div class="card md:w-full md:p-14 lg:p-1 lg:w-full lg:h-full border-2 border-purple-600 bg-base-100 ">
+        <div class="card md:w-full md:p-14 lg:p-1 lg:w-full lg:h-full  bg-base-100 ">
         <figure class=" pt-2">
-          <img class="shadow-xl rounded-xl w-full m-5 lg:p-1 lg:w-full lg:h-[347px] border-2 border-green-600 " src="${
+          <img class="shadow-xl rounded-xl w-full m-5 lg:p-1 lg:w-full lg:h-[347px] " src="${
             videos.thumbnail
           }" alt="Shoes" class="rounded-xl" />
         </figure>
@@ -97,7 +97,7 @@ const handleClass = async (categoryId) => {
          </div>
           <p class="-ml-14 " >${videos.others?.views}</p>
 
-          <p class=" font-extrabold text-white -mt-20 ml-52  md:ml-96 md:-mt-20 lg:-mt-28 rounded-lg p-2 lg:ml-28 absolute ${
+          <p class=" font-extrabold text-white -mt-24 ml-[190px]  md:ml-96 md:-mt-24 lg:-mt-28 rounded-lg p-2 lg:ml-28 absolute ${
             isNaN(timeConverter(convertedTime)) ? "" : "hidden"
           } bg-black "> ${timeConverter(convertedTime)}</p>
           
@@ -151,9 +151,9 @@ const handleClass = async (categoryId) => {
 //     const div = document.createElement("div");
 //     const convertedTime = parseFloat(video?.others?.posted_date ? check : ``);
 //     div.innerHTML = `
-//         <div class="card md:w-full md:p-14 lg:p-1 lg:w-full lg:h-full border-2 border-purple-600 bg-base-100 ">
+//         <div class="card md:w-full md:p-14 lg:p-1 lg:w-full lg:h-full  bg-base-100 ">
 //         <figure class=" pt-2">
-//           <img class="shadow-xl rounded-xl w-full m-5 lg:p-1 lg:w-full lg:h-[347px] border-2 border-green-600 " src="${
+//           <img class="shadow-xl rounded-xl w-full m-5 lg:p-1 lg:w-full lg:h-[347px] " src="${
 //       video.thumbnail
 //       }" alt="Shoes" class="rounded-xl" />
 //         </figure>
@@ -184,10 +184,10 @@ const sortByViewButton = document.querySelector("#sort-by-view");
 // console.log(sortByViewButton);
 sortByViewButton.addEventListener("click", () => {
   // console.log(sortByViewButton);
- const ck = allCategory.forEach(views)
-console.log(ck);
+//  const ck = allCategory.forEach(views)
+// console.log(ck);
   const sortedVideos = [...fetchedVideos];
-  // console.log(fetchedVideos);
+  console.log(fetchedVideos);
   const makeViewCountToInt =
     (sortedVideos) 
   console.log(makeViewCountToInt);
